@@ -39,8 +39,6 @@ Pendekatan penggunaan jenis database : SQL
 
 6. Tabel `messages`: Menyimpan informasi tentang pesan yang dikirim dalam percakapan, dengan `id` sebagai primary key, `user_id` sebagai foreign key yang merujuk ke `users.id`, `chat_id` sebagai foreign key yang merujuk ke `chats.id` yang menandakan percakapan di mana pesan dikirim, `group_id` sebagai foreign key yang merujuk ke `groups.id` yang menandakan grup di mana pesan dikirim, `type` untuk menandakan tipe pesan (misalnya, teks, gambar, atau file), `content` untuk isi pesan atau url sesuai dengan type yang dipilih, `sent_at` untuk waktu pengiriman pesan atau status pending, `delivery_at` merupakan waktu pesan telah terkirim atau status sent, dan `seen_at` merupakan waktu pesan dilihat oleh penerima atau status read. tipe data yang digunakan untuk waktu merupakan varchar bertujuan untuk mengatasi adanya perbedaan waktu pada pengguna, sehingga akan diimplementasikan menggunakan `Unix Epoch Time` yang lebih universal.
 
-
-
 ### Masalah
 
 Anda diberikan array angka integer positif yang mewakili harga stok dalam beragam hari
@@ -64,7 +62,7 @@ sebuah share dari stok manapun kalau anda masih memegang share lain. Anda juga t
 - Membeli pada hari ke 5 = `4` dan menjual pada hari ke 6 = `10` (10 - 4) = 6
 - Total profit dengan sejumlah i transaksi adalah `5 + 6 = 11`
 
-[Code Solution](max_profit_test.go)
+[Code Solution](https://github.com/ariefmahendra/max-profit-test/blob/main/max_profit_test.go)
 
 ### Approach : 
 1. Inisialiasi sebuah array profit yang berisikan buy and sell.
